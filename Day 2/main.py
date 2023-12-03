@@ -1,13 +1,3 @@
-import numpy as np
-from math import *
-from cv2 import *
-from scipy import *
-
-aruco
-np.array()
-inf
-io
-
 def get_input():
     with open("input") as raw:
         lines = [line.split(": ") for line in raw.read().splitlines()]
