@@ -1,7 +1,7 @@
 def get_input():
     with open('input') as file:
         content = file.read().splitlines()
-        data = []
+        _data = []
         for line in content:
             _, lists = line.split(':')
             parts = []
@@ -10,8 +10,8 @@ def get_input():
                 for i in range(0, len(p), 3):
                     part.append(int(p[i + 1] + p[i + 2]))
                 parts.append(part)
-            data.append(parts)
-    return data
+            _data.append(parts)
+    return _data
 
 
 def func_part_i(_input):
@@ -20,7 +20,7 @@ def func_part_i(_input):
         power = None
         for num in my:
             if num in given:
-                power = 1 if power == None else power + 1
+                power = 1 if power is None else power + 1
         if power:
             tot += 2 ** (power - 1)
     return tot
